@@ -10,6 +10,7 @@ const Home = ({ navigation }) => {
     <HomeBackground source={logo}>
       <TopStyling>
         <Title>Bakery</Title>
+        <Text>Bake it till you make it</Text>
       </TopStyling>
 
       <ButtonStyled onPress={() => navigation.navigate("Bakeries")}>

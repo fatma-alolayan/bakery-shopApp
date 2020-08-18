@@ -3,6 +3,7 @@ import styled from "styled-components/native";
 export const HomeBackground = styled.ImageBackground`
   width: 100%;
   height: 100%;
+  align-items: center;
 `;
 
 export const TopStyling = styled.View`

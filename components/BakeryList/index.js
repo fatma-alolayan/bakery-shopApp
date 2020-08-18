@@ -1,6 +1,5 @@
 import React from "react";
 import { observer } from "mobx-react";
-import { View, Text } from "react-native";
 import { List, Content, Spinner } from "native-base";
 
 //components

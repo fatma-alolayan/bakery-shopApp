@@ -5,6 +5,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../Home";
 import BakeryList from "../BakeryList";
 import ItemList from "../ItemList";
+import CartList from "../CartList";
+import CartButton from "../buttons/CartButton";
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -26,7 +28,9 @@ const RootNavigator = () => {
       <Screen
         name="Bakeries"
         component={BakeryList}
-        options={{ title: "Choose a Bakery" }}
+        options={{
+          headerRight: () => <CartButton />,
+        }}
       />
       <Screen
         name="Items"
@@ -35,9 +39,11 @@ const RootNavigator = () => {
           const { bakery } = route.params;
           return {
             title: bakery.name,
+            headerRight: () => <CartButton />,
           };
         }}
       />
+      <Screen name="Cart" component={CartList} />
     </Navigator>
   );
 };

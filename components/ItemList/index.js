@@ -1,6 +1,5 @@
 import React from "react";
 import { observer } from "mobx-react";
-import { Text } from "react-native";
 import { Spinner, List, Content } from "native-base";
 
 //store
